@@ -1,4 +1,4 @@
 run: build
-	@./bin/learngo
+	@./bin/main
 build: 
-	@go build -o bin/learngo
+	@go build -o bin/learngo main.go
