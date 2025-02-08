@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import { Greet } from '../../wailsjs/go/main/App'
-import { Greet2 } from '../../wailsjs/go/main/JsonHanle'
 
 const data = reactive({
   name: "",
@@ -9,7 +8,7 @@ const data = reactive({
 })
 
 function greet() {
-  Greet2(data.name).then(result => {
+  Greet(data.name).then(result => {
     data.resultText = result
   })
 }
