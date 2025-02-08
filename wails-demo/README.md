@@ -1,5 +1,11 @@
 # README
 
+## 创建项目
+
+```shell
+wails init -n myproject -t vue-ts
+```
+
 ## About
 
 This is the official Wails Vue-TS template.
