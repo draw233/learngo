@@ -1,2 +1,7 @@
 bin
+<<<<<<< HEAD
 sqllite.db
+=======
+*.log
+*.gz
+>>>>>>> 7e17560cfa9d207d82ece5af3507b1a7ee01b92e
