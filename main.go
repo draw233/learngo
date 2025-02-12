@@ -18,7 +18,8 @@ func main() {
 		// Stderr = os.NewFile(uintptr(syscall.Stderr), "/dev/stderr")
 	)
 	Stdout.WriteString("Hello 世界!")
-	ctrlC()
+	// ctrlC()
+	climbStairs(5)
 }
 
 func ctrlC() {
@@ -26,4 +27,14 @@ func ctrlC() {
 	sig := make(chan os.Signal, 1)
 	signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM)
 	fmt.Printf("quit (%v)\n", <-sig)
+}
+
+func climbStairs(n int) {
+	dp := make([][]int, n)
+	for i := range dp {
+		dp[i] = make([]int, n)
+	}
+	dp[1][1] = 2
+	v := min(dp[1][1],2)
+	println(v)
 }
